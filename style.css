@@ -66,25 +66,64 @@ nav a{color:#fff;text-decoration:none;font-weight:600}
 .see-more{position:relative;z-index:2;margin-top:26px}
 .see-more button{background:#0af;border:none;color:#fff;padding:10px 20px;border-radius:22px;font-weight:700;cursor:pointer}
 .see-more button:hover{background:#08c}
-.detail-btn {
+.see-detail {
   display: inline-block;
   margin-top: 10px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: #0af;
-  color: #fff;
+  padding: 8px 20px; /* Giảm padding để nút nhỏ hơn */
+  border-radius: 20px; /* Góc bo tròn nhẹ hơn cho sự tinh tế */
+  background:rgb(255, 255, 255); /* Màu nền tông vàng */
+
   font-weight: 600;
+  font-size: 14px; /* Giảm kích thước chữ cho nút nhỏ hơn */
   text-decoration: none;
-  transition: all 0.3s ease;
+  text-transform: uppercase; /* Chữ in hoa cho vẻ ngoài cao cấp */
+  letter-spacing: 0.5px; /* Khoảng cách chữ nhẹ */
+  box-shadow: 0 3px 10px rgba(134, 130, 130, 0.3); /* Bóng đổ nhẹ với tông vàng */
+  transition: all 0.3s ease; /* Chuyển đổi mượt mà */
+  position: relative;
+  overflow: hidden; /* Hỗ trợ hiệu ứng gợn sóng */
 }
 
-.detail-btn:hover {
-  background: #08c;
+.see-detail:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%); /* Gradient đậm hơn khi hover */
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5); /* Bóng đổ mạnh hơn */
+  transform: translateY(-2px); /* Hiệu ứng nhấc lên nhẹ */
 }
 
+/* Hiệu ứng gợn sóng khi nhấn */
+.see-detail:active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2); /* Gợn sóng nhẹ cho tông vàng */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ripple 0.6s ease-out;
+}
 
-@media (max-width:600px){.hero-main{font-size:28px}.hero-main span{font-size:32px}}
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 150px; /* Giảm kích thước gợn sóng cho nút nhỏ hơn */
+    height: 150px;
+    opacity: 0;
+  }
+}
 
+/* Điều chỉnh cho màn hình nhỏ */
+@media (max-width: 600px) {
+  .see-detail {
+    padding: 6px 16px; /* Nút nhỏ hơn nữa trên mobile */
+    font-size: 12px; /* Chữ nhỏ hơn trên mobile */
+  }
+}
 /* BLOG */
 .blog-section {
   max-width: 1200px;
@@ -308,7 +347,7 @@ body {
 
 /* Hộp chi tiết gần full màn */
 .modal-content {
-  background: #daacac;
+  background: #ffffff;
   border-radius: 20px;
   width: 95%;
   height: 90%;
@@ -341,12 +380,12 @@ body {
 .main-image {
   flex: 2;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: top;
 }
 .main-image img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width:100%;
+  max-height:60%;
   border-radius: 15px;
   object-fit: contain;
 }
@@ -358,6 +397,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   font-size: 16px;
+  color: #000000;
+  overflow-y: auto;
 }
 
 /* Chọn màu bên dưới */

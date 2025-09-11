@@ -134,3 +134,38 @@ const items = document.querySelectorAll('.accordion-item');
         item.classList.toggle('active');
       });
     });
+// Lấy modal và các phần tử
+const modal = document.getElementById("carDetailModal");
+const closeBtn = document.querySelector(".close-btn");
+const detailTitle = document.getElementById("detailTitle");
+const detailPrice = document.getElementById("detailPrice");
+const detailImage = document.getElementById("detailImage");
+
+// Khi click "Xem chi tiết"
+document.querySelectorAll(".see-detail").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    const card = e.target.closest(".card");
+    const title = card.querySelector("h3").innerText;
+    const price = card.querySelector("p").innerText;
+    const imageSrc = card.querySelector("img").src;
+
+    detailTitle.innerText = title;
+    detailPrice.innerText = "Giá: " + price;
+    detailImage.src = imageSrc;
+
+    modal.style.display = "flex"; // Hiện modal
+  });
+});
+
+// Đóng modal khi nhấn nút "x" (close-btn)
+closeBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
+  modal.style.display = "none"; // Ẩn modal
+});
+
+// Đóng modal khi nhấn ra ngoài nội dung modal
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none"; // Ẩn modal
+  }
+});
