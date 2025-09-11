@@ -310,6 +310,74 @@ body {
   height: 20px;
   margin-right: 5px;
 }
+.reviews-container {
+  width: 100%;
+  overflow: hidden;
+  background: #48484838;
+  padding: 20px 0;
+}
+
+.reviews {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 20px;
+}
+
+.review-card {
+  flex: 0 0 auto;
+  min-width: 250px;
+  background: rgb(109, 107, 107);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.stars {
+  color: gold;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.review-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: bold;
+}
+
+/* Animation chạy qua trái */
+.reviews-top .reviews-track {
+  animation: scroll-left 25s linear infinite;
+}
+
+/* Animation chạy qua phải */
+.reviews-bottom .reviews-track {
+  animation: scroll-right 25s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* chỉ chạy nửa vì có 2 dãy */
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
 /* VIDEO SECTION */
 .video-section {
   display: flex;
