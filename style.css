@@ -66,6 +66,22 @@ nav a{color:#fff;text-decoration:none;font-weight:600}
 .see-more{position:relative;z-index:2;margin-top:26px}
 .see-more button{background:#0af;border:none;color:#fff;padding:10px 20px;border-radius:22px;font-weight:700;cursor:pointer}
 .see-more button:hover{background:#08c}
+.detail-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #0af;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.detail-btn:hover {
+  background: #08c;
+}
+
 
 @media (max-width:600px){.hero-main{font-size:28px}.hero-main span{font-size:32px}}
 
@@ -279,6 +295,95 @@ body {
   display: block;
   border-radius: 10px;
 }
+/* Modal toàn màn hình */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hộp chi tiết gần full màn */
+.modal-content {
+  background: #daacac;
+  border-radius: 20px;
+  width: 95%;
+  height: 90%;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Nút đóng */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Body chính */
+.modal-body {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Ảnh chính */
+.main-image {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+/* Thông tin xe */
+.car-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 16px;
+}
+
+/* Chọn màu bên dưới */
+.color-options {
+  margin-top: 15px;
+}
+.color-thumbs {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+.color-thumb {
+  width: 80px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  object-fit: cover;
+  transition: 0.2s;
+}
+.color-thumb:hover {
+  border: 2px solid #000;
+  transform: scale(1.05);
+}
+
+/* FOOTER */
 .footer {
   background:#1c1c1c;
   color:#fff;

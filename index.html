@@ -129,28 +129,118 @@
 <section class="collection-section">
   <h2>Collection</h2>
   <div class="filters">
-    <select id="brandFilter"><option value="all">All Brands</option><option value="BMW">BMW</option><option value="Mercedes">Mercedes</option><option value="Audi">Audi</option></select>
-    <select id="typeFilter"><option value="all">All Types</option><option value="SUV">SUV</option><option value="Sedan">Sedan</option><option value="Coupe">Coupe</option></select>
-    <select id="priceFilter"><option value="all">All Prices</option><option value="low">Dưới 500.000$</option><option value="mid">500.000$ - 1.000.000$</option><option value="high">Trên 1.000.000$</option></select>
+    <select id="brandFilter">
+      <option value="all">All Brands</option>
+      <option value="BMW">BMW</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
+    </select>
+    <select id="typeFilter">
+      <option value="all">All Types</option>
+      <option value="SUV">SUV</option>
+      <option value="Sedan">Sedan</option>
+      <option value="Coupe">Coupe</option>
+    </select>
+    <select id="priceFilter">
+      <option value="all">All Prices</option>
+      <option value="low">Dưới 500.000$</option>
+      <option value="mid">500.000$ - 1.000.000$</option>
+      <option value="high">Trên 1.000.000$</option>
+    </select>
   </div>
 
   <div class="collection" id="carCollection">
-    <div class="card" data-brand="BMW" data-type="SUV" data-price="low"><img src="image/Bmw.jpg"><h3>BMW X5</h3><p>400.000$</p></div>
-    <div class="card" data-brand="BMW" data-type="Sedan" data-price="mid"><img src="image/Bmw.jpg"><h3>BMW 7 Series</h3><p>800.000$</p></div>
-    <div class="card" data-brand="Mercedes" data-type="Coupe" data-price="high"><img src="image/Bmw.jpg"><h3>Mercedes AMG GT</h3><p>1.200.000$</p></div>
-    <div class="card" data-brand="Audi" data-type="SUV" data-price="mid"><img src="image/Bmw.jpg"><h3>Audi Q8</h3><p>700.000$</p></div>
-    <div class="card" data-brand="Audi" data-type="Sedan" data-price="low"><img src="image/Bmw.jpg"><h3>Audi A6</h3><p>450.000$</p></div>
-    <div class="card" data-brand="BMW" data-type="Coupe" data-price="high"><img src="image/Bmw.jpg"><h3>BMW i8</h3><p>1.100.000$</p></div>
-    <div class="card" data-brand="Mercedes" data-type="SUV" data-price="mid"><img src="image/Bmw.jpg"><h3>Mercedes GLE</h3><p>600.000$</p></div>
-    <div class="card" data-brand="Audi" data-type="Coupe" data-price="mid"><img src="image/Bmw.jpg"><h3>Audi R8</h3><p>900.000$</p></div>
-    <div class="card" data-brand="BMW" data-type="SUV" data-price="mid"><img src="image/Bmw.jpg"><h3>BMW X7</h3><p>750.000$</p></div>
-    <div class="card" data-brand="Mercedes" data-type="Sedan" data-price="low"><img src="image/Bmw.jpg"><h3>Mercedes C-Class</h3><p>480.000$</p></div>
-    <div class="card" data-brand="Lamborghini" data-type="Coupe" data-price="high"><img src="image/Bmw.jpg"><h3>Lamborghini Huracan</h3><p>950.000$</p></div>
-    <div class="card" data-brand="Ferrari" data-type="Coupe" data-price="high"><img src="image/Bmw.jpg"><h3>Ferrari Roma</h3><p>1.300.000$</p></div>
+    <div class="card" data-brand="BMW" data-type="SUV" data-price="low">
+      <img src="image/Bmw.jpg" alt="BMW X5">
+      <h3>BMW X5</h3>
+      <p>400.000$</p>
+      <button class="see-detail">Xem chi tiết</button>
+    </div>
+
+    <div class="card" data-brand="BMW" data-type="Sedan" data-price="mid">
+      <img src="image/Bmw.jpg" alt="BMW 7 Series">
+      <h3>BMW 7 Series</h3>
+      <p>800.000$</p>
+      <button class="see-detail">Xem chi tiết</button>
+    </div>
+
+    <div class="card" data-brand="Mercedes" data-type="Coupe" data-price="high">
+      <img src="image/Bmw.jpg" alt="Mercedes AMG GT">
+      <h3>Mercedes AMG GT</h3>
+      <p>1.200.000$</p>
+      <button class="see-detail">Xem chi tiết</button>
+    </div>
+
+    <div class="card" data-brand="Audi" data-type="SUV" data-price="mid">
+      <img src="image/Bmw.jpg" alt="Audi Q8">
+      <h3>Audi Q8</h3>
+      <p>700.000$</p>
+      <button class="see-detail">Xem chi tiết</button>
+    </div>
+
+    <div class="card" data-brand="Audi" data-type="Sedan" data-price="low">
+      <img src="image/Bmw.jpg" alt="Audi A6">
+      <h3>Audi A6</h3>
+      <p>450.000$</p>
+      <button class="see-detail">Xem chi tiết</button>
+    </div>
+
+    <div class="card" data-brand="BMW" data-type="Coupe" data-price="high">
+      <img src="image/Bmw.jpg" alt="BMW i8">
+      <h3>BMW i8</h3>
+      <p>1.100.000$</p>
+      <button class="see-detail">Xem chi tiết</button>
+    </div>
+
+    <div class="card" data-brand="Mercedes" data-type="SUV" data-price="mid">
+      <img src="image/Bmw.jpg" alt="Mercedes GLE">
+      <h3>Mercedes GLE</h3>
+      <p>600.000$</p>
+      <button class="see-detail">Xem chi tiết</button>
+    </div>
+
+    <div class="card" data-brand="Audi" data-type="Coupe" data-price="mid">
+      <img src="image/Bmw.jpg" alt="Audi R8">
+      <h3>Audi R8</h3>
+      <p>900.000$</p>
+      <button class="see-detail">Xem chi tiết</button>
+    </div>
+
+    <div class="card" data-brand="BMW" data-type="SUV" data-price="mid">
+      <img src="image/Bmw.jpg" alt="BMW X7">
+      <h3>BMW X7</h3>
+      <p>750.000$</p>
+      <button class="see-detail">Xem chi tiết</button>
+    </div>
+
+    <div class="card" data-brand="Mercedes" data-type="Sedan" data-price="low">
+      <img src="image/Bmw.jpg" alt="Mercedes C-Class">
+      <h3>Mercedes C-Class</h3>
+      <p>480.000$</p>
+      <button class="see-detail">Xem chi tiết</button>
+    </div>
+
+    <div class="card" data-brand="Lamborghini" data-type="Coupe" data-price="high">
+      <img src="image/Bmw.jpg" alt="Lamborghini Huracan">
+      <h3>Lamborghini Huracan</h3>
+      <p>950.000$</p>
+      <button class="see-detail">Xem chi tiết</button>
+    </div>
+
+    <div class="card" data-brand="Ferrari" data-type="Coupe" data-price="high">
+      <img src="image/Bmw.jpg" alt="Ferrari Roma">
+      <h3>Ferrari Roma</h3>
+      <p>1.300.000$</p>
+      <button class="see-detail">Xem chi tiết</button>
+    </div>
   </div>
 
-  <div class="see-more"><button id="seeMoreBtn">Xem thêm</button></div>
+  <div class="see-more">
+    <button id="seeMoreBtn">Xem thêm</button>
+  </div>
 </section>
+
+
 <!-- BLOG -->
   <section class="blog-section">
   <h2 class="blog-title">Blog</h2>
@@ -275,6 +365,45 @@
     </video>
   </div>
 </section>
+<!-- CAR DETAIL -->
+<!-- MODAL CHI TIẾT XE -->
+<div id="carDetailModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <div class="modal-body">
+      <!-- Ảnh chính -->
+      <div class="main-image">
+        <img id="detailImage" src="image/bmw-black.jpg" alt="Car Main">
+      </div>
+
+      <!-- Thông tin bên phải -->
+      <div class="car-info">
+        <h2 id="detailTitle">BMW X5</h2>
+        <p id="detailPrice">Giá: 400.000$</p>
+        <p id="detailSpecs">
+          Động cơ: V6 Turbo<br>
+          Công suất: 335hp<br>
+          Tăng tốc 0-100km/h: 5.5s<br>
+          Tốc độ tối đa: 250km/h
+        </p>
+      </div>
+    </div>
+
+    <!-- Chọn màu bên dưới -->
+    <div class="color-options">
+      <p><strong>Chọn màu:</strong></p>
+      <div class="color-thumbs">
+        <img src="image/bmw-black.jpg" class="color-thumb" data-img="image/bmw-black.jpg" alt="Đen">
+        <img src="image/bmw-red.jpg" class="color-thumb" data-img="image/bmw-red.jpg" alt="Đỏ">
+        <img src="image/bmw-blue.jpg" class="color-thumb" data-img="image/bmw-blue.jpg" alt="Xanh">
+        <img src="image/bmw-white.jpg" class="color-thumb" data-img="image/bmw-white.jpg" alt="Trắng">
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!--FOOTER-->
 <footer class="footer">
   <div class="footer-container">
