@@ -1,0 +1,63 @@
+/* Basic layout */
+.auth-body{
+  min-height:100vh;
+  background: radial-gradient(1200px 600px at 10% 10%, #1f2937 0%, #0b0f17 60%, #070a10 100%);
+  display:flex;
+  align-items:center;
+}
+
+.auth-card{
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.02);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.nav-pills .nav-link{
+  color:#cbd5e1;
+  border-radius: 999px;
+}
+.nav-pills .nav-link.active{
+  color:#fff;
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+}
+
+.card-body form{
+  transition: opacity .25s ease, transform .25s ease;
+}
+.card-body form.d-none{
+  opacity: 0;
+  transform: translateY(6px);
+}
+.card-body form:not(.d-none){
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-primary{
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  border: none;
+}
+.btn-success{
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  border: none;
+}
+.btn:disabled{ opacity:.7; }
+
+/* Form decorations */
+.form-control{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #fff;
+}
+.form-control:focus{
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  box-shadow: 0 0 0 .2rem rgba(99,102,241,.25);
+}
+.form-text{ color:#94a3b8; }
+
+/* Alert look on dark */
+.alert{ border: none; }
+.alert-success{ background: rgba(22, 163, 74, .15); color: #86efac; }
+.alert-danger{ background: rgba(220, 38, 38, .15); color: #fecaca; }
