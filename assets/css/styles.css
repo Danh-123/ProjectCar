@@ -1,0 +1,63 @@
+/* CSS cho giao diện hiện đại, nhẹ nhàng và responsive */
+:root {
+  --bg-start: #eef2ff;
+  --bg-end: #f8fafc;
+  --primary: #4f46e5; /* indigo-600 */
+  --primary-600: #4338ca;
+  --success: #16a34a;
+  --ring: rgba(79, 70, 229, 0.2);
+}
+
+* { box-sizing: border-box; }
+
+body.auth-bg {
+  min-height: 100vh;
+  background: radial-gradient(1200px 600px at 10% 10%, var(--bg-start), transparent),
+              radial-gradient(1000px 500px at 90% 20%, #e0f2fe, transparent),
+              linear-gradient(180deg, var(--bg-end), #ffffff);
+}
+
+.auth-card {
+  width: min(100%, 980px);
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.auth-hero {
+  background-image: url('../../image/nen.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.auth-tabs .auth-tab {
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #334155;
+  transition: all 200ms ease;
+}
+.auth-tabs .auth-tab.active {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 0 0 6px var(--ring);
+}
+
+.view { display: none; opacity: 0; transform: translateY(6px); transition: all 200ms ease; }
+.view.active { display: block; opacity: 1; transform: translateY(0); }
+
+.btn-primary { background-color: var(--primary); border-color: var(--primary); }
+.btn-primary:hover { background-color: var(--primary-600); border-color: var(--primary-600); }
+.btn-success { background-color: var(--success); border-color: var(--success); }
+
+.form-control:focus { box-shadow: 0 0 0 .25rem var(--ring); border-color: var(--primary); }
+
+.alert { border: none; }
+
+.avatar {
+  width: 48px; height: 48px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* Small tweaks on mobile */
+@media (max-width: 576px) {
+  .auth-card { border-radius: 0; }
+}
